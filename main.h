@@ -14,4 +14,6 @@
 #include <errno.h>
 #include <signal.h>
 
+int _printf(const char *format, ...);
+
 #endif
