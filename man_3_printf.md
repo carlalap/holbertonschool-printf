@@ -6,24 +6,34 @@ footer: _printf 3.0.0
 date: March 13, 2023
 ---
 # NAME
-**\_printf** - formatted output
+**\_printf** - formatted output, Holbie style
 
 # SYNOPSIS
 **\_printf** [*arguments*]...
 
 # DESCRIPTION
-The **\_printf** utility formats and prints its arguments, after the first, under control of the format.
+The **\_printf** utility is a copycat of printf in the C <stdio.h> library. It takes a string argument and any number of other arguments which are the values to be formatted.
 
 # OPTIONS
-**-h** 
-: display help message
+**%c** 
+: prints a single character
 
-**-n** 
-: name of the person to say hello to
+**%s** 
+: prints a string of characters
+
+**%d** 
+: prints an integer
+
+**%i** 
+: prints an integer
+
+**%%** 
+: prints a percent sign
 
 # EXAMPLES
-**hello -n Joe**
-: Displays "Hello, Joe!" and then exits.
+Print the string "Holberton":  
+$ _printf "%s", Holberton  
+Holberton
 
 # AUTHORS
 Written by Sarah Markland & Carlos Alarcon.

@@ -4,25 +4,43 @@
 .hy
 .SH NAME
 .PP
-\f[B]_printf\f[R] \- formatted output
+\f[B]_printf\f[R] \- formatted output, Holbie style
 .SH SYNOPSIS
 .PP
 \f[B]_printf\f[R] [\f[I]arguments\f[R]]\&...
 .SH DESCRIPTION
 .PP
-The \f[B]_printf\f[R] utility formats and prints its arguments, after
-the first, under control of the format.
+The \f[B]_printf\f[R] utility is a copycat of printf in the C <stdio.h>
+library.
+It takes a string argument and any number of other arguments which are
+the values to be formatted.
 .SH OPTIONS
 .TP
-.B \f[B]\-h\f[R]
-display help message
+.B \f[B]%c\f[R]
+prints a single character
 .TP
-.B \f[B]\-n\f[R]
-name of the person to say hello to
+.B \f[B]%s\f[R]
+prints a string of characters
+.TP
+.B \f[B]%d\f[R]
+prints an integer
+.TP
+.B \f[B]%i\f[R]
+prints an integer
+.TP
+.B \f[B]%%\f[R]
+prints a percent sign
 .SH EXAMPLES
-.TP
-.B \f[B]hello \-n Joe\f[R]
-Displays \[lq]Hello, Joe!\[rq] and then exits.
+.PP
+Print the string \[lq]Holberton\[rq]:
+.PD 0
+.P
+.PD
+\&.ta $ _printf \[lq]%s\[rq], Holberton
+.PD 0
+.P
+.PD
+Holberton
 .SH AUTHORS
 .PP
 Written by Sarah Markland & Carlos Alarcon.
