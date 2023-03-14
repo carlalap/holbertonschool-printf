@@ -1,60 +1,35 @@
 
-<h1><b> Printf </b></h1>
-
-
-<b>Resources</b>
-
-<a href="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/misc/2022/11/d38f88e96a617135804dca9f9c49632751e06aa7.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20230313%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20230313T003259Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=03f267a6bae2fd1dc0533a884cbfa9b67ff43370e2bec3bf8b18698793eacb90"> Secrets of printf</a>
-<br><a href="https://www.it.uc3m.es/pbasanta/asng/course_notes/input_output_printf_en.html#:~:text=8.3.-,4.,be%20printed%20on%20the%20screen"> The printf function</a>
-
-<b>Learning Objectives</b>
-
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-
-<b>Requirements</b>
-
-General
-
-<br>-Allowed editors: vi, vim, emacs
-<br>-All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
-<br>-All your files should end with a new line
-<br>-A README.md file, at the root of the folder of the project is mandatory
-<br>-Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-<br>-You are not allowed to use global variables
-<br>-No more than 5 functions per file
-<br>-In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-<br>-The prototypes of all your functions should be included in your header file called main.h
-<br>-Don’t forget to push your header file
-<br>-All your header files should be include guarded
-<br>-Note that we will not provide the _putchar function for this project
+<h1><b> Slim-printf: A Lighter Formatted Output Solution </b></h1>
 
 <b>Description</b>
 
-The printf function (the name comes from “print formatted”) prints a string on the screen using a “format string” that includes the instructions to mix several strings and produce the final string to be printed on the screen.    A custom _printf() for learning purposes was developed by cohort #20 students Sarah Markland and Carlos Alarcon.  _printf() function format string is a character string, beginning and ending in its initial shift state, if any. These arguments are placed using the percentage '%' operator
+This is a custom _printf function developed by a team of two Holberton School Tulsa students from Cohort 20. The code was written to satisfy the project requirements outlined by the Holberton curriculum and for the greater good.  
 
- 
-<b>Your code will be compiled this way: </b>
+This function can handle four conversion specifiers (%c, %s, %i, %d) and can also handle "%%", which prints a percent sign. Formatted output is printed to stdout, and the return value is the number of characters printed.  
 
-$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
+<b>Usage</b>
 
-<br>As a consequence, be careful not to push any c file containing a main function in the root directory of your project (you could have a test folder containing all your tests files including main functions)
-<br>Our main files will include your main header file (main.h): #include main.h
-<br>You might want to look at the gcc flag -Wno-format when testing with your _printf and the standard printf. Example of test file that you could use:
+When a string and any number of arguments are passed to _printf, the string will be formatted, printed to stdout, and subsequent arguments will be plugged into corresponding format specifiers in the inital string.
 
-<b>Use & Examples </b>
+Usage examples, provided as a main.c file by Holberton School, are as follows:  
 
-Prototype: int _printf(const char *format, ...); Use - General: _printf("format string", var1, var2, ...);
+```
+#include "main.h"
 
-Examples:
-
-Basic String: _printf("%s Holberton", "Hello");`
-
-Output: Hello Holberton
-
-Print integers: _printf("This is an array element: arr[%d]:%c", 32, arr[32]);`
-
-Output: This is an array element arr[32]:A
-<br>
+int main(void)  
+{  
+	_printf("String:[%s]\n", "I am a string !");
+	_printf("Character:[%c]\n", 'H');
+	_printf("Negative:[%d]\n", -762534);
+	return (0);
+}
+```
+Output:  
+```
+String:[I am a string !]  
+Character:[H]  
+Negative:[-762534]
+```
 
 <b>Files contained in this repository</b>
 
@@ -89,20 +64,21 @@ Output: This is an array element arr[32]:A
         <TR>
 		<TD>_putchar.c</TD> <TD>Custom putchar function.</TD> <TD>None</TD>
 	</TR>   
-</TABLE>
+</TABLE>  
 
-<b>Tasks required for this project</b>
 
-<br>0. I am not going anywhere. You can print that wherever you want to. I'm here and I am a Spur for life1. I am not going anywhere. You can print that wherever you want to. I'm here and I am a Spur for life.
-<br>Write a function that produces output according to a format. Handle the following conversion specifiers:
-<br>c
-<br>s
-<br>%
+<b>Contributions</b>  
 
-<br>1. Education is when you read the fine print. Experience is what you get if you dont
-<br>Handle the following conversion specifiers:
-<br>d
-<br>i
+We are not open to contributions, but thanks for asking!
 
-<br>2. Just because its in print doesn't mean its the gospel
-<br>Create a man page for the function
+<b>Authors and Ackknowledgments</b>  
+
+Coding by Carlos Alarcon & Sarah Markland
+
+We would like to thank our peers and stutors at Holberton for teaching us about coding and kindness.
+
+We would also like to thank our families (including pets) for supporting us through the challenges of learning to become software programmers and better humans. 
+```
+"Technology is best when it brings people together."  
+-Matt Mullenweg
+```
