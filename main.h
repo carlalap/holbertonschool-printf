@@ -9,9 +9,9 @@
 
 
 /**
-* struct format - match the conversion specifiers for printf
-* @id: type char pointer of the specifier i.e (l, h) for (d, i, u, o, x, X)
-* @f: type pointer to function for the conversion specifier
+* struct format - match the conversion specifiers to args passed
+* @id: pointer to format specifer, i.e. id[0] = % and id[1] is the letter (c, s, d, i)
+* @f: pointer to function determined by the conversion specifier
 *
 */
 
